@@ -7,9 +7,6 @@ const HeroSection = (props) => {
   return (<div className="relative bg-white overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-        <svg className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-          <polygon points="50,0 100,0 50,100 0,100" />
-        </svg>
 
         <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
           <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
@@ -55,17 +52,12 @@ const HeroSection = (props) => {
               </div>
             </div>
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
-
-              <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
-
-              <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
-
-              <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+              {
+                props.config.links.map(item => {
+                  return <a href={item.url} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{item.label}</a>
+                })
+              }
             </div>
-            <a href="#" className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
-              Log in
-          </a>
           </div>
         </div>
 
@@ -95,7 +87,7 @@ const HeroSection = (props) => {
       </div>
     </div>
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img className="w-2/3 m-20" src="hero.svg" alt=""></img>
+      <img className="w-2/3 h-2/3 mx-auto mt-20 md:w-1/2 md:w-1/2" src="hero.svg" alt=""/>
     </div>
   </div>)
 }
