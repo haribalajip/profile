@@ -1,9 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-
+import { useState } from 'react'
 const HeroSection = (props) => {
-  console.log(props)
+  const  [ visibilityState, setVisibilityState ] = useState({ showMobileNav: false });
+  const handleCloseBtn = () => {
+    setVisibilityState({ showMobileNav: !visibilityState.showMobileNav });
+  }
   return (<div className="relative bg-white overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -17,7 +20,10 @@ const HeroSection = (props) => {
                   <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"></img>
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
-                  <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                  <button 
+                    onClick={handleCloseBtn}
+                    type="button"
+                    className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
                     <span className="sr-only">Open main menu</span>
                     <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -36,7 +42,7 @@ const HeroSection = (props) => {
           </nav>
         </div>
 
-        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div className={visibilityState.showMobileNav ? "absolute top-0 inset-x-0 p-2 transition transform origin-top-right" : "hidden"}>
           <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
@@ -44,6 +50,7 @@ const HeroSection = (props) => {
               </div>
               <div className="-mr-2">
                 <button
+                  onClick={handleCloseBtn}
                   type="button"
                   className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Close main menu</span>
