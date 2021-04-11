@@ -5,6 +5,10 @@ const constants = {
         label: "Github",
         url: "https://github.com/haribalajip"
       },
+      {
+        label: "Stack Overflow",
+        url: "https://stackoverflow.com/users/5080620/hhsb"
+      },
     ],
     greet: "I'm, ",
     name: "Hari Balaji",
