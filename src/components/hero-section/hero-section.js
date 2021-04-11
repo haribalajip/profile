@@ -17,7 +17,7 @@ const HeroSection = (props) => {
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
                   <span className="sr-only">Workflow</span>
-                  <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"></img>
+                  <img className="h-8 w-auto sm:h-10 lg:h-14" src="haribalaji.svg"></img>
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
                   <button 
@@ -69,7 +69,6 @@ const HeroSection = (props) => {
             </div>
           </div>
         </div>
-
         <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div className="sm:text-center lg:text-left">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
