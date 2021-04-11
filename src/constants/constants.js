@@ -17,7 +17,7 @@ const constants = {
     list: [
       {
         svgName: 'CodeIcon',
-        title: "Build Email features",
+        title: "Code",
         description: "Email is a crucial area for a CRM. And I take care of Frontend engineering for email and email related features."
       },
       {
