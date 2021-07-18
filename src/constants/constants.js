@@ -9,15 +9,19 @@ const constants = {
         label: "Stack Overflow",
         url: "https://stackoverflow.com/users/5080620/hhsb"
       },
+      {
+        label: "Strava",
+        url: "https://www.strava.com/athletes/65738581"
+      },
     ],
-    greet: "I'm, ",
+    greet: "Hi 👋, I'm ",
     name: "Hari Balaji",
     subtitle: "A frontend developer and a JS enthusiast building awesome features for Freshworks CRM.",
     linkedInUrl: "https://www.linkedin.com/in/haribalajip/"
   },
   featureSectionConfig: {
     titleSmall: "MY LIFE",
-    title: "My daily routine",
+    title: "My daily activities",
     list: [
       {
         svgName: 'CodeIcon',
@@ -32,12 +36,34 @@ const constants = {
       {
         svgName: 'UserGroupIcon',
         title: "Collaborate",
-        description: "My favorite part. I engage with my team in conversations where my advice makes value. Often, I see myself mentoring a few new joiners."
+        description: "I engage with my team in conversations where my advice makes value. Often, I see myself mentoring a few new joiners."
       },
       {
         svgName: 'HeartIcon',
         title: 'Run a mile',
         description: "I love monrings. And I love running. What more else one would would ask when the weather is great for a morning run! I make sure I do one mile run atleast 4 days a week."
+      }
+    ]
+  },
+  historySectionConfig: {
+    list: [
+      {
+        title: "Senior software engineer - Frontend",
+        description: "Working as a Senior frontend engineer, for the Email squad. Where I write maintainable code. I also ensure that the code that my peers write don't compromise on quality.",
+        org: "Freshworks",
+        type: "Full-time",
+        location: "Chennai",
+        duration: "Apr 2018 - Present",
+        logo: "fw-logo.svg"
+      },
+      {
+        title: "Project engineer",
+        description: "I worked with Nokia, and Ericsson during my tenure and I built them performant web apps out of Backbone JS and Angular JS respectively.",
+        org: "Wipro Ltd",
+        type: "Full-time",
+        location: "Chennai",
+        duration: "Aug 2015 - Apr 2018",
+        logo: "wipro_logo.svg"
       }
     ]
   }
