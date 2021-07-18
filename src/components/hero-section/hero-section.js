@@ -46,7 +46,7 @@ const HeroSection = (props) => {
           <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
-                <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt=""></img>
+                <img className="h-8 w-auto" src="haribalaji.svg" alt=""></img>
               </div>
               <div className="-mr-2">
                 <button
@@ -69,9 +69,9 @@ const HeroSection = (props) => {
             </div>
           </div>
         </div>
-        <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-20 xl:mt-28">
           <div className="sm:text-center lg:text-left">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-5xl">
               <span className="block xl:inline">{props.config.greet}</span>
               <span className="block text-indigo-600 xl:inline">{props.config.name}</span>
             </h1>
@@ -95,7 +95,7 @@ const HeroSection = (props) => {
       </div>
     </div>
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img className="w-2/3 h-2/3 mx-auto mt-20 md:w-1/2 md:w-1/2" src="hero.svg" alt="" title="Psst! My desk will have a lot of toys unlike this one :P"/>
+      <img className="w-1/3 h-2/3 mx-auto md:mt-20 md:w-1/2 md:w-1/2" src="hero.svg" alt="" title="Psst! My desk will have a lot of toys unlike this one :P"/>
     </div>
   </div>)
 }
