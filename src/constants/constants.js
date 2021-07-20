@@ -58,7 +58,7 @@ const constants = {
       },
       {
         title: "Project engineer",
-        description: "I worked with Nokia, and Ericsson during my tenure and I built them performant web apps out of Backbone JS and Angular JS respectively.",
+        description: "I built router health monitoring apps that relies on data visualization for clients such as Nokia, and Ericsson.",
         org: "Wipro Ltd",
         type: "Full-time",
         location: "Chennai",
