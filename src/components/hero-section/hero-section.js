@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import LazyImage from '../lazy-image/component';
 import { useState } from 'react'
+
 const HeroSection = (props) => {
   const  [ visibilityState, setVisibilityState ] = useState({ showMobileNav: false });
   const handleCloseBtn = () => {
@@ -95,7 +97,9 @@ const HeroSection = (props) => {
       </div>
     </div>
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img className="w-1/3 h-2/3 mx-auto md:mt-20 md:w-1/2 md:w-1/2" src="hero.svg" alt="" title="Psst! My desk will have a lot of toys unlike this one :P"/>
+      <LazyImage>
+        <img className="w-1/3 h-2/3 mx-auto md:mt-20 md:w-1/2 md:w-1/2" src="hero.svg" alt="" title="Psst! My desk will have a lot of toys unlike this one :P"/>
+      </LazyImage>
     </div>
   </div>)
 }
