@@ -41,7 +41,7 @@ const constants = {
       {
         svgName: 'HeartIcon',
         title: 'Run a mile',
-        description: "I love monrings. And I love running. What more else one would would ask when the weather is great for a morning run! I make sure I do one mile run atleast 4 days a week."
+        description: "I love mornings. And I love running. What more else one would would ask when the weather is great for a morning run! I make sure I do one mile run atleast 4 days a week."
       }
     ]
   },
