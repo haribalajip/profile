@@ -49,7 +49,7 @@ const constants = {
     list: [
       {
         title: "Senior software engineer - Frontend",
-        description: "Working as a Senior frontend engineer, for the Email squad. Where I write maintainable code. I also ensure that the code that my peers write don't compromise on quality.",
+        description: "Working as a Senior frontend engineer and acting as a Squad lead, for the Email squad. Where I write maintainable code. I also ensure that the code that my peers write don't compromise on quality.",
         org: "Freshworks",
         type: "Full-time",
         location: "Chennai",
