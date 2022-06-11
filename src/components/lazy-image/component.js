@@ -2,27 +2,15 @@ import React, { useEffect, useState, createRef } from "react";
 
 const LazyImage = (props) => {
   const [intersected, setIntersected] = useState(false);
-  const createObserver = () => {
-    let observer;
-  
-    let options = {
-      root: document.querySelector('#root'),
-      rootMargin: "0px",
-      threshold: 1
-    };
-  
-    observer = new IntersectionObserver(handleIntersect);
-    return observer;
-  }
   
   let timeout;
   const handleIntersect = (entries) => {
     if (entries[0].isIntersecting) {
-      timeout = setTimeout(() => setIntersected(true), 1000);
+      timeout = setTimeout(() => setIntersected(true), 500);
     }
   }
   
-  let observer = createObserver();
+  let observer = new IntersectionObserver(handleIntersect);
   const imageRef = createRef();
 
   useEffect(() => {
@@ -30,11 +18,21 @@ const LazyImage = (props) => {
     return () => clearTimeout(timeout);
   }, []); // no dependencies to run only once
 
-  let children = props.children;
+  const getImageConfig = () => {
+    let config = {
+      class: props.className,
+      src: props.src
+    }
+    if (!intersected) {
+      config.class += ' blur';
+      // config.src = props.lowResImage // Fake blur for now
+    }
+    return config;
+  }
+
   return (
     <div ref={imageRef} className='lazy-image'>
-      {intersected && children}
-      {!intersected && <h1>Image</h1>}
+      <img className={getImageConfig().class} src={getImageConfig().src} alt=''/>
     </div>
   )
 };

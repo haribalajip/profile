@@ -97,9 +97,11 @@ const HeroSection = (props) => {
       </div>
     </div>
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <LazyImage>
-        <img className="w-1/3 h-2/3 mx-auto md:mt-20 md:w-1/2 md:w-1/2" src="hero.svg" alt="" title="Psst! My desk will have a lot of toys unlike this one :P"/>
-      </LazyImage>
+      <LazyImage
+        lowResImage='low-res/hero.png'
+        className="w-1/3 h-2/3 mx-auto md:mt-20 md:w-1/2 md:w-1/2"
+        src='hero.svg'
+        alt=''/>
     </div>
   </div>)
 }
