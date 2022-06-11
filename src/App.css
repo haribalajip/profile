@@ -40,3 +40,7 @@
 .history-list {
   margin-left: 8%;
 }
+
+.blur {
+  filter: blur(2px);
+}
