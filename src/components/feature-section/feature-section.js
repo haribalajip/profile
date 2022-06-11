@@ -16,7 +16,7 @@ const FeatureSection = (props) => {
               props.config.list.map(item => {
                 const TAGNAME = HeroIcons[item.svgName];
                 return (
-                  <div className="relative">
+                  <div className="relative" key={item.svgName}>
                     <dt>
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                         <TAGNAME className="h-6 w-6"/>

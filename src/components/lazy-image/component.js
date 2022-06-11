@@ -16,7 +16,7 @@ const LazyImage = (props) => {
   useEffect(() => {
     observer.observe(imageRef.current);
     return () => clearTimeout(timeout);
-  }, []); // no dependencies to run only once
+  }, [imageRef, observer, timeout]); // no dependencies to run only once
 
   const getImageConfig = () => {
     let config = {

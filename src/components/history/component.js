@@ -11,7 +11,7 @@ const History = (props) => {
       {
         props.config.list.map(item => {
           return (
-            <div className='flex justify-center'>
+            <div className='flex justify-center' key={item.logo}>
               <div className="w-2/3 flex flex-col md:flex-row items-center border border-gray-200 rounded mb-10">
                 <LazyImage lowResImg='low-res/hero.png' className='w-32 h-32 md:pl-6' src={item.logo}/>
                 <div className="p-8 text-left space-y-4">
