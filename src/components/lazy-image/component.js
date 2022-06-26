@@ -3,20 +3,19 @@ import React, { useEffect, useState, createRef } from "react";
 const LazyImage = (props) => {
   const [intersected, setIntersected] = useState(false);
   
-  let timeout;
-  const handleIntersect = (entries) => {
-    if (entries[0].isIntersecting) {
-      timeout = setTimeout(() => setIntersected(true), 500);
-    }
-  }
-  
-  let observer = new IntersectionObserver(handleIntersect);
   const imageRef = createRef();
-
+  
   useEffect(() => {
+    let timeout;
+    const handleIntersect = (entries) => {
+      if (entries[0].isIntersecting) {
+        timeout = setTimeout(() => setIntersected(true), 500);
+      }
+    }
+    let observer = new IntersectionObserver(handleIntersect);
     observer.observe(imageRef.current);
     return () => clearTimeout(timeout);
-  }, []); // no dependencies to run only once
+  }, [imageRef]); // no dependencies to run only once
 
   const getImageConfig = () => {
     let config = {
