@@ -2,6 +2,10 @@ const constants = {
   heroSectionConfig: {
     links: [
       {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/haribalajip/"
+      },
+      {
         label: "Github",
         url: "https://github.com/haribalajip"
       },
