@@ -1,4 +1,46 @@
-const constants = {
+type HistorySectionListItem = {
+ title: string,
+ description: string,
+ org: string,
+ type: string,
+ location: string,
+ duration: string,
+ logo: string
+};
+
+type HeroSectionLinkItem = {
+  label: string,
+  url: string,
+}
+
+type HeroSectionConfig = {
+  links: HeroSectionLinkItem[],
+  greet: string,
+  name: string,
+  subtitle: string,
+  linkedInUrl: string
+}
+
+type FeatureSectionConfigListItem = {
+  svgName: string,
+  title: string,
+  description: string
+}
+
+type FeatureSectionConfig = {
+  titleSmall: string,
+  title: string,
+  list: FeatureSectionConfigListItem[]
+}
+
+type HistorySectionConfig = { list: HistorySectionListItem[] }
+type Constants = {
+  heroSectionConfig: HeroSectionConfig,
+  featureSectionConfig: FeatureSectionConfig,
+  historySectionConfig: HistorySectionConfig,
+}
+
+const constants: Constants = {
   heroSectionConfig: {
     links: [
       {
