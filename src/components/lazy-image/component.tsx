@@ -1,10 +1,9 @@
-import React, { useEffect, useState, createRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const LazyImage: React.FC<{ src: string; className: string }> = (props) => {
   const [intersected, setIntersected] = useState(false);
 
-  const imageRef: React.RefObject<HTMLImageElement> = createRef();
-
+const imageRef = useRef(null);
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>;
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
@@ -15,13 +14,12 @@ const LazyImage: React.FC<{ src: string; className: string }> = (props) => {
     let observer: IntersectionObserver = new IntersectionObserver(
       handleIntersect
     );
-    let currentElement: HTMLImageElement | null = imageRef.current;
+    let currentElement = imageRef.current;
     if (currentElement) {
       observer.observe(currentElement);
     }
     return () => clearTimeout(timeout);
-  }, [imageRef]); // no dependencies to run only once
-
+  }, []);
   const getImageConfig = () => {
     let config = {
       class: props.className,
